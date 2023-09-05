@@ -7,15 +7,17 @@
     --Very-Dark-Blue: hsl(216, 12%, 8%);
 }
 
+
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    transition: all .2s linear;
 }
 
 html {
     font-size: 15px;
-    transition: all .2s linear;
 }
 
 body {
@@ -46,9 +48,13 @@ h1,
     line-height: 1.4;
 }
 
-
-.wrapper {
+.container {
     background-color: var(--Dark-Blue);
+}
+
+
+.wrapper,
+.thank-you {
     padding: 24px 32px;
     max-width: 375px;
     display: flex;
@@ -62,7 +68,6 @@ h1,
     padding: 14px;
     border-radius: 50%;
     background-color: rgb(37, 50, 60);
-
 }
 
 .rating {
@@ -72,17 +77,13 @@ h1,
 
 .rating .number {
     color: var(--Light-Grey);
-    padding: 12px 18px;
+    padding: 10px 16px;
     cursor: pointer;
-}
-
-.rating .number:active {
-    background-color: var(--Light-Grey);
-
+    border: none;
 }
 
 .rating .number:hover {
-    background-color: var(--Orange);
+    background-color: var(--Medium-Grey);
     color: var(--White);
 }
 
@@ -99,4 +100,14 @@ h1,
 .submit:hover {
     background-color: var(--White);
     color: var(--Orange);
+}
+
+.thank-you {
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you p {
+    color: var(--White);
+    font-size: .8rem;
 }
