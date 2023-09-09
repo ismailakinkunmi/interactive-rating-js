@@ -11,11 +11,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    transition: all .2s linear;
 }
 
 html {
     font-size: 15px;
-    transition: all .2s linear;
 }
 
 body {
@@ -33,11 +33,11 @@ li {
 }
 
 h1,
-.btn {
+.submit {
     color: var(--White);
 }
 
-.btn {
+.submit {
     background-color: var(--Orange);
 }
 
@@ -46,9 +46,12 @@ h1,
     line-height: 1.4;
 }
 
-
-.wrapper {
+.container {
     background-color: var(--Dark-Blue);
+}
+
+.wrapper,
+.thank-you {
     padding: 24px 32px;
     max-width: 375px;
     display: flex;
@@ -58,11 +61,10 @@ h1,
 }
 
 .star,
-.rating li {
+.rating .number {
     padding: 14px;
     border-radius: 50%;
     background-color: rgb(37, 50, 60);
-
 }
 
 .rating {
@@ -70,22 +72,23 @@ h1,
     gap: 1.1rem;
 }
 
-.rating li {
+.rating .number {
     color: var(--Light-Grey);
-    padding: 12px 18px;
+    padding: 10px 16px;
     cursor: pointer;
+    border: none;
 }
 
-.rating li:active {
-    background-color: var(--Light-Grey);
-}
-
-.rating li:hover {
-    background-color: var(--Orange);
+.rating .number:hover {
+    background-color: var(--Medium-Grey);
     color: var(--White);
 }
 
-.btn {
+.number:focus {
+    background-color: var(--Orange);
+}
+
+.submit {
     background-color: var(--Orange);
     padding: 18px;
     border-radius: 40px;
@@ -95,7 +98,17 @@ h1,
     letter-spacing: 1.3px;
 }
 
-.btn:hover {
+.submit:hover {
     background-color: var(--White);
     color: var(--Orange);
+}
+
+.thank-you {
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you p {
+    color: var(--White);
+    font-size: .8rem;
 }
