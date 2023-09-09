@@ -3,15 +3,13 @@ const wrapper = document.querySelector(".wrapper");
 const submit = document.querySelector(".submit");
 const numbers = document.querySelectorAll(".number");
 
-// const userRateValue = () => {
-//   numbers.forEach((number) =>
-//     number.addEventListener("click", () => number.innerHTML)
-//   );
-// };
+const para = document.createElement("p");
 
-numbers.forEach((number) =>
-  number.addEventListener("click", () => console.log(number.innerHTML))
-);
+numbers.forEach((number) => {
+  number.addEventListener("click", () => {
+    para.innerHTML = ` You selected ${number.innerHTML} out of 5`;
+  });
+});
 
 const interactiveState = () => {
   const ratedContainer = document.createElement("div");
@@ -23,11 +21,8 @@ const interactiveState = () => {
 
   ratedContainer.appendChild(image);
 
-  const userSelected = document.createElement("p");
-  userSelected.innerHTML = numbers.forEach((number) =>
-    number.addEventListener("click", () => number.innerHTML)
-  ); //userRateValue(); //`You selected ${userRateValue()} out of 5`;
-  ratedContainer.appendChild(userSelected);
+  // user rate scale 1 to 5
+  ratedContainer.appendChild(para);
 
   const thank = document.createElement("p");
   thank.innerHTML = "Thank you!";
