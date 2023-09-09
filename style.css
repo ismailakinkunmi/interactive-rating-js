@@ -7,8 +7,6 @@
     --Very-Dark-Blue: hsl(216, 12%, 8%);
 }
 
-
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -52,7 +50,6 @@ h1,
     background-color: var(--Dark-Blue);
 }
 
-
 .wrapper,
 .thank-you {
     padding: 24px 32px;
@@ -85,6 +82,10 @@ h1,
 .rating .number:hover {
     background-color: var(--Medium-Grey);
     color: var(--White);
+}
+
+.number:focus {
+    background-color: var(--Orange);
 }
 
 .submit {
